@@ -35,7 +35,7 @@ def subscribe(client: mqtt_client):
     def on_message(client, userdata, msg):
         message = msg.payload.decode()
         if message != '1':
-            print(f"Received `{message}` from `{msg.topic}` topic")
+            print(f"Received {message} from {msg.topic} topic")
             print(type(message))
         # Parse the JSON message
             try:
